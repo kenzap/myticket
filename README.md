@@ -20,7 +20,12 @@ You can export custom created layouts to <a href="https://wordpress.org/plugins/
 
 ![Seat Mapping](https://cdn.kenzap.com/github/img/myticket-2.png)
 
-<details open>
+## Support
+- For source <a href="https://kenzap.com/myticket-events-plugin-support-customization-service-1016004/" >code customization requests</a> you can reach the official support team.
+- For help with <a href="https://kenzap.com/seat-reservation-in-wordpress-setup-service-1014779/" >seat integration</a>.
+- For <a href="https://kenzap.blog/how-to-create-custom-concert-hall-in-wordpress-with-seat-reservation/">DIY layout mapping</a> using this software.
+
+<details>
 <summary>Releases</summary>
 
 <strong>version 2.4</strong>
@@ -40,18 +45,13 @@ You can export custom created layouts to <a href="https://wordpress.org/plugins/
 - migration to ES6 scripting
 </details>
 
-## Support
-- For source <a href="https://kenzap.com/myticket-events-plugin-support-customization-service-1016004/" >code customization requests</a> you can reach the official support team.
-- For help with <a href="https://kenzap.com/seat-reservation-in-wordpress-setup-service-1014779/" >seat integration</a>.
-- For <a href="https://kenzap.blog/how-to-create-custom-concert-hall-in-wordpress-with-seat-reservation/">DIY layout mapping</a> using this software.
-
 ## Setup
+
+### Install
 
 ```shell
 $ npm i
 ```
-
-## Commands
 
 ### Develop
 
