@@ -22,7 +22,7 @@ You can export custom created layouts to <a href="https://wordpress.org/plugins/
 
 <details><summary>Releases</summary>
 <p>
-    ```
+<sup>
       version 2.4
       - fixing forever loading screens for users with slow connection
       - upgrading package and rollup configuration files
@@ -38,7 +38,8 @@ You can export custom created layouts to <a href="https://wordpress.org/plugins/
 
       version 2.0
       - migration to ES6 scripting
-    ```
+</sup>
+
 </p>
 </details>
 
