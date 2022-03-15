@@ -26,22 +26,22 @@ You can export custom created layouts to <a href="https://wordpress.org/plugins/
 - For <a href="https://kenzap.blog/how-to-create-custom-concert-hall-in-wordpress-with-seat-reservation/">DIY layout mapping</a> using this software.
 
 <details>
-<summary>Releases</summary>
-
-<strong>version 2.4</strong>
+<summary>View releases</summary>
+<br>
+<b>version 2.4</b>
 - fixing forever loading screens for users with slow connection
 - upgrading package and rollup configuration files
 
-<strong>version 2.3</strong>
+<b>version 2.3</b>
 - adding price variations to the zone and individual seats
 
-<strong>version 2.2</strong>
+<b>version 2.2</b>
 - adding custom fields for additional checkout information that can be used with WooCommerce
 
-<strong>version 2.1</strong>
+<b>version 2.1</b>
 - implemeting zone rotation feature
 
-<strong>version 2.0</strong>
+<b>version 2.0</b>
 - migration to ES6 scripting
 </details>
 
