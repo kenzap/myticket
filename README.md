@@ -20,22 +20,23 @@ You can export custom created layouts to <a href="https://wordpress.org/plugins/
 
 ![Seat Mapping](https://cdn.kenzap.com/github/img/myticket-2.png)
 
-<details>
+<details open>
 <summary>Releases</summary>
-version 2.4
+
+* version 2.4
 - fixing forever loading screens for users with slow connection
 - upgrading package and rollup configuration files
 
-version 2.3
+* version 2.3
 - adding price variations to the zone and individual seats
 
-version 2.2
+* version 2.2
 - adding custom fields for additional checkout information that can be used with WooCommerce
 
-version 2.1
+* version 2.1
 - implemeting zone rotation feature
 
-version 2.0
+* version 2.0
 - migration to ES6 scripting
 </details>
 
