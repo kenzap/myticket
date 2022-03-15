@@ -23,22 +23,27 @@ You can export custom created layouts to <a href="https://wordpress.org/plugins/
 <details open>
 <summary>Releases</summary>
 
-* version 2.4
+<strong>version 2.4</strong>
 - fixing forever loading screens for users with slow connection
 - upgrading package and rollup configuration files
 
-* version 2.3
+<strong>version 2.3</strong>
 - adding price variations to the zone and individual seats
 
-* version 2.2
+<strong>version 2.2</strong>
 - adding custom fields for additional checkout information that can be used with WooCommerce
 
-* version 2.1
+<strong>version 2.1</strong>
 - implemeting zone rotation feature
 
-* version 2.0
+<strong>version 2.0</strong>
 - migration to ES6 scripting
 </details>
+
+## Support
+- For source <a href="https://kenzap.com/myticket-events-plugin-support-customization-service-1016004/" >code customization requests</a> you can reach the official support team.
+- For help with <a href="https://kenzap.com/seat-reservation-in-wordpress-setup-service-1014779/" >seat integration</a>.
+- For <a href="https://kenzap.blog/how-to-create-custom-concert-hall-in-wordpress-with-seat-reservation/">DIY layout mapping</a> using this software.
 
 ## Setup
 
