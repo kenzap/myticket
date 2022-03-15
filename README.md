@@ -20,10 +20,7 @@ You can export custom created layouts to <a href="https://wordpress.org/plugins/
 
 ![Seat Mapping](https://cdn.kenzap.com/github/img/myticket-2.png)
 
-<details><summary>Releases</summary>
-<p>
-<sup>
-version 2.4
+<details><summary>Releases</summary><p><sup>version 2.4
 - fixing forever loading screens for users with slow connection
 - upgrading package and rollup configuration files
 
@@ -37,10 +34,7 @@ version 2.1
 - implemeting zone rotation feature
 
 version 2.0
-- migration to ES6 scripting
-</sup>
-</p>
-</details>
+- migration to ES6 scripting</sup></p></details>
 
 ## Setup
 
