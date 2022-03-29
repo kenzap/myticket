@@ -1015,6 +1015,10 @@ body:not(.stv) #svg_mapping text {
   min-width: 300px;
 }
 
+.seat_head > input {
+  max-width: 64px;
+}
+
 .seat_text {
   position: absolute;
   margin: 30px 0 0 80px;
@@ -1237,3 +1241,5 @@ body:not(.stv) #svg_mapping text {
 #kenzap_stats .modal-header {
   border: 0;
 }
+
+/*# sourceMappingURL=styles.css.map */

@@ -28,6 +28,10 @@ You can export custom created layouts to <a href="https://wordpress.org/plugins/
 <details>
 <summary>View releases</summary>
 
+<b>version 2.5</b>
+- upgrading API
+- fixing seat numbering visibility
+
 <b>version 2.4</b>
 - fixing forever loading screens for users with slow connection
 - upgrading package and rollup configuration files
