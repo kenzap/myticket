@@ -634,7 +634,7 @@ footer {
 }
 
 .changed#edit_details button {
-  box-shadow: #32c832 0 0 1px 2px;
+  box-shadow: rgb(50, 200, 50) 0 0 1px 2px;
 }
 
 #help {
@@ -696,7 +696,7 @@ footer {
   min-width: 16px;
   text-align: center;
   font-size: 11px;
-  box-shadow: 1px 1px 0 white inset, -1px -1px 0 rgba(0, 0, 0, 0.08) inset;
+  box-shadow: 1px 1px 0 rgb(255, 255, 255) inset, -1px -1px 0 rgba(0, 0, 0, 0.08) inset;
   overflow: hidden;
   cursor: default;
   vertical-align: middle;
@@ -704,7 +704,7 @@ footer {
 
 .key:active {
   padding: 2px 5px 0;
-  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.08) inset, -1px -1px 0 white inset;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.08) inset, -1px -1px 0 rgb(255, 255, 255) inset;
 }
 
 #overlay {
@@ -941,8 +941,8 @@ body:not(.stv) #svg_mapping text {
 }
 
 #svg_mapping text {
-  fill: #51c5cf;
-  stroke: #51c5cf;
+  fill: rgb(81, 197, 207);
+  stroke: rgb(81, 197, 207);
 }
 
 #svg_mapping circle.align {
@@ -959,12 +959,12 @@ body:not(.stv) #svg_mapping text {
 }
 
 #svg_mapping circle.cr.selected {
-  fill: black !important;
+  fill: rgb(0, 0, 0) !important;
   z-index: 100000;
 }
 
 #svg_mapping circle:hover {
-  fill: black !important;
+  fill: rgb(0, 0, 0) !important;
   cursor: pointer;
 }
 
