@@ -1,0 +1,430 @@
+#contents {
+  margin-top: 82px;
+}
+
+footer {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.po {
+  cursor: pointer;
+}
+
+/* orders table */
+.table {
+  min-width: 760px;
+}
+
+.list-icon {
+  color: #9b9b9b;
+  font-size: 32px;
+  margin-left: 32px;
+  cursor: pointer;
+}
+
+.list-icon.remove-order:before {
+  color: #ff0079 !important;
+}
+
+.list-icon.set-home:before {
+  color: #9b9b9b !important;
+}
+
+.edit-page:before {
+  color: #9b9b9b !important;
+}
+
+.list-icon.chm:before {
+  color: #1941DF !important;
+}
+
+.last {
+  text-align: right;
+}
+
+#checkinmode {
+  transform: scale(1.3);
+  margin-top: 5px;
+}
+
+.details {
+  max-width: 250px;
+  min-width: 250px;
+}
+
+@media (max-width: 577px) {
+  .table {
+    min-width: 500px;
+  }
+}
+/* product list */
+.table-p-list thead tr th:nth-child(1) {
+  width: 44px;
+}
+
+.table-p-list .search-cont {
+  display: none;
+}
+
+.table-p-list .bi-search {
+  cursor: pointer;
+}
+
+.table-p-list .t-data {
+  line-height: 1.2;
+}
+
+.table-p-list .form-switch > input {
+  transform: scale(1.3);
+  margin-top: 5px;
+}
+
+.table-p-list .td-holder {
+  max-width: 300px;
+}
+
+.table-p-list .td-time {
+  min-width: 130px;
+}
+
+.timgc {
+  max-width: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.timgc img {
+  position: relative;
+  min-height: 32px;
+  min-width: 32px;
+}
+
+.order-details,
+.view-order {
+  cursor: pointer;
+}
+
+.row-mark0 {
+  background-color: transparent;
+}
+
+.row-mark1 {
+  background-color: #fff9e6;
+}
+
+.row-mark2 {
+  background-color: #fff2cc;
+}
+
+.row-mark3 {
+  background-color: #ffecb3;
+}
+
+.row-mark4 {
+  background-color: #ffe699;
+}
+
+.row-mark5 {
+  background-color: #ffdf80;
+}
+
+.row-mark6 {
+  background-color: #ffd966;
+}
+
+.row-mark7 {
+  background-color: #ffd24d;
+}
+
+.row-mark8 {
+  background-color: #ffcc33;
+}
+
+/* table filtering */
+.st-opts {
+  display: inline-block;
+}
+
+.dropdown-item {
+  padding: 8px 24px;
+}
+
+.inp {
+  margin-top: 0px;
+  margin-left: 16px;
+  border-radius: 4px;
+  padding: 0.74rem 1.375rem;
+  border: 0;
+  background: transparent;
+}
+
+/* order preview */
+.modal-header {
+  border-bottom: 0;
+}
+
+.modal-footer {
+  border-top: 0;
+}
+
+.modal-body-cont {
+  max-width: 840px;
+  margin: auto;
+}
+
+.product_body {
+  display: block;
+}
+
+.mloader {
+  display: none;
+}
+
+table.list td {
+  font-size: 24px;
+}
+
+table.items {
+  width: 100%;
+  display: table;
+  /* order preview mode/suggestions */
+}
+table.items td {
+  vertical-align: top;
+}
+table.items .qty {
+  text-align: right;
+  width: 100px;
+}
+table.items .edit-qty {
+  text-align: right;
+  max-width: 200px;
+}
+table.items .tp {
+  text-align: right;
+  max-width: 120px;
+}
+table.items .edit-tp {
+  text-align: right;
+  max-width: 250px;
+}
+table.items .vars {
+  font-style: italic;
+  font-size: 0.8rem;
+  border-left: 2px solid #ff0079;
+}
+table.items .vars:empty {
+  display: none;
+}
+table.items .order-item-options {
+  cursor: pointer;
+}
+table.items .add-item {
+  cursor: pointer;
+}
+table.items .s-list {
+  position: absolute;
+  margin-left: -5px;
+  padding: 5px 0;
+  background: white;
+  list-style: none;
+  cursor: pointer;
+  z-index: 10;
+}
+table.items .s-list li {
+  padding: 8px 16px;
+}
+table.items .s-list li:hover {
+  color: white;
+  background-color: #1941DF;
+}
+table.items .s-list li.current {
+  color: white;
+  background-color: pink;
+}
+table.items [data-toggle=false].s-list {
+  display: none;
+}
+
+/* order preview variations */
+.item-vars-input .kp-check,
+.item-vars-input .kp-radio {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.item-vars-input .tag {
+  font-size: 0.8rem;
+  padding: 2px 8px 4px 8px;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.item-vars-input .kp-radio label {
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--bs-light);
+}
+
+.item-vars-input .kp-radio label span {
+  display: flex;
+  align-items: center;
+  padding: 8px 8px 8px 8px;
+  border-radius: 99em;
+  transition: 0.25s ease;
+}
+
+.item-vars-input .kp-radio label span:before {
+  display: flex;
+  flex-shrink: 0;
+  content: "";
+  background-color: var(--bs-white);
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  margin-right: 12px;
+  transition: 0.25s ease;
+  box-shadow: inset 0 0 0 0.125em var(--bs-blue);
+}
+
+.item-vars-input .kp-radio input {
+  position: absolute;
+  left: -9999px;
+}
+
+.item-vars-input .kp-radio input:checked + span:before {
+  box-shadow: inset 0 0 0 0.4375em var(--bs-blue);
+}
+
+.item-vars-input .kp-check .price,
+.item-vars-input .kp-radio .price {
+  color: var(--txtColorB);
+  text-align: right;
+  display: inline-block;
+  margin: auto 8px auto auto;
+  float: right;
+}
+
+/* https://codepen.io/avstorm/pen/Mowqre */
+.item-vars-input .kp-check label {
+  user-select: none;
+  cursor: pointer;
+  margin: 0px 0;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--bs-light);
+}
+
+.item-vars-input .kp-check label input:checked + .checkbox {
+  border-color: var(--bs-blue);
+}
+
+.item-vars-input .kp-check label input:checked + .checkbox svg path {
+  fill: var(--bs-blue);
+}
+
+.item-vars-input .kp-check label input:checked + .checkbox svg polyline {
+  stroke-dashoffset: 0;
+}
+
+.item-vars-input .kp-check label :hover .checkbox svg path {
+  stroke-dashoffset: 0;
+}
+
+.item-vars-input .kp-check label .checkbox {
+  position: relative;
+  top: 2px;
+  float: left;
+  margin-right: 8px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--bs-dark);
+  border-radius: 3px;
+  margin-left: 8px;
+  margin-right: 12px;
+}
+
+.item-vars-input .kp-check label .checkbox svg {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+}
+
+.item-vars-input .kp-check label .checkbox svg path {
+  fill: none;
+  stroke: var(--bs-blue);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 71px;
+  stroke-dashoffset: 71px;
+  transition: all 0.6s ease;
+}
+
+.item-vars-input .kp-check label .checkbox svg polyline {
+  fill: none;
+  stroke: var(--bs-white);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 18px;
+  stroke-dashoffset: 18px;
+  transition: all 0.3s ease;
+}
+
+.item-vars-input .kp-check label > span {
+  pointer-events: none;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.item-vars-input .kp-check label input {
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+/* search orders */
+@media (max-width: 500px) {
+  input#usearch {
+    margin-top: 16px;
+    margin-left: 0px;
+  }
+  .st-opts {
+    display: block;
+  }
+}
+.elipsized {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.modal-dialog-wide {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  margin: 0;
+  border: 0;
+  background: #fff;
+}
+
+.modal-dialog-wide .modal-content {
+  width: 100%;
+  margin: auto;
+  max-width: 840px;
+  border: 0;
+  background: #fff;
+}
+
+.modal-dialog-wide .modal-header {
+  border: 0;
+}

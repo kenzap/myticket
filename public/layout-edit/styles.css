@@ -7,111 +7,64 @@ footer {
   margin-bottom: 32px;
 }
 
-/* Functional styling;
- * These styles are required for noUiSlider to function.
- * You don't need to change these rules to apply your design.
- */
-.noUi-target,
-.noUi-target * {
-  -webkit-touch-callout: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-user-select: none;
-  -ms-touch-action: none;
-  touch-action: none;
-  -ms-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+.loader {
+  z-index: 10000;
 }
 
 .noUi-target {
   position: relative;
+  direction: ltr;
 }
 
-.noUi-base,
-.noUi-connects {
+.noUi-base {
   width: 100%;
   height: 100%;
   position: relative;
   z-index: 1;
 }
 
-/* Wrapper for all connect elements.
- */
-.noUi-connects {
-  overflow: hidden;
-  z-index: 0;
-}
-
-.noUi-connect,
-.noUi-origin {
-  will-change: transform;
+.noUi-connect {
   position: absolute;
-  z-index: 1;
-  top: 0;
   right: 0;
-  height: 100%;
-  width: 100%;
-  -ms-transform-origin: 0 0;
-  -webkit-transform-origin: 0 0;
-  -webkit-transform-style: preserve-3d;
-  transform-origin: 0 0;
-  transform-style: flat;
-}
-
-/* Offset direction
- */
-.noUi-txt-dir-rtl.noUi-horizontal .noUi-origin {
+  top: 0;
   left: 0;
-  right: auto;
+  bottom: 0;
 }
 
-/* Give origins 0 height/width so they don't interfere with clicking the
- * connect elements.
- */
-.noUi-vertical .noUi-origin {
-  top: -100%;
+.noUi-origin {
+  position: absolute;
+  height: 0;
   width: 0;
 }
 
-.noUi-horizontal .noUi-origin {
-  height: 0;
-}
-
 .noUi-handle {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  position: absolute;
+  position: relative;
+  z-index: 1;
 }
 
-.noUi-touch-area {
-  height: 100%;
-  width: 100%;
-}
-
-.noUi-state-tap .noUi-connect,
-.noUi-state-tap .noUi-origin {
-  -webkit-transition: transform 0.3s;
-  transition: transform 0.3s;
+.noUi-state-tap .noUi-connect, .noUi-state-tap .noUi-origin {
+  -webkit-transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
+  transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
 }
 
 .noUi-state-drag * {
   cursor: inherit !important;
 }
 
-/* Slider size and handle placement;
- */
+.noUi-base, .noUi-handle {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
 .noUi-horizontal {
   height: 18px;
 }
 
 .noUi-horizontal .noUi-handle {
   width: 34px;
-  height: 22px;
-  right: -17px;
+  height: 28px;
+  left: -17px;
   top: -6px;
-  left: 0;
 }
 
 .noUi-vertical {
@@ -121,35 +74,25 @@ footer {
 .noUi-vertical .noUi-handle {
   width: 28px;
   height: 34px;
-  right: -6px;
-  bottom: -17px;
+  left: -6px;
+  top: -17px;
 }
 
-.noUi-txt-dir-rtl.noUi-horizontal .noUi-handle {
-  left: -17px;
-  right: auto;
-}
-
-/* Styling;
- * Giving the connect element a border radius causes issues with using transform: scale
- */
 .noUi-target {
-  background: #FAFAFA;
+  background: #fafafa;
   border-radius: 4px;
-  border: 1px solid #D3D3D3;
-  box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB;
-}
-
-.noUi-connects {
-  border-radius: 3px;
+  border: 1px solid #d3d3d3;
+  box-shadow: inset 0 1px 1px #f0f0f0, 0 3px 6px -5px #bbb;
 }
 
 .noUi-connect {
-  background: #71c016;
+  background: #3fb8af;
+  border-radius: 4px;
+  box-shadow: inset 0 0 3px rgba(51, 51, 51, 0.45);
+  -webkit-transition: background 450ms;
+  transition: background 450ms;
 }
 
-/* Handles and cursors;
- */
 .noUi-draggable {
   cursor: ew-resize;
 }
@@ -159,27 +102,24 @@ footer {
 }
 
 .noUi-handle {
-  border: 1px solid #D9D9D9;
+  border: 1px solid #d9d9d9;
   border-radius: 3px;
-  background: #FFF;
+  background: #fff;
   cursor: default;
-  box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB;
+  box-shadow: inset 0 0 1px #fff, inset 0 1px 7px #ebebeb, 0 3px 6px -3px #bbb;
 }
 
 .noUi-active {
-  box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #DDD, 0 3px 6px -3px #BBB;
+  box-shadow: inset 0 0 1px #fff, inset 0 1px 7px #ddd, 0 3px 6px -3px #bbb;
 }
 
-/* Handle stripes;
- */
-.noUi-handle:before,
-.noUi-handle:after {
+.noUi-handle:after, .noUi-handle:before {
   content: "";
   display: block;
   position: absolute;
-  height: 8px;
+  height: 14px;
   width: 1px;
-  background: #E8E7E6;
+  background: #e8e7e6;
   left: 14px;
   top: 6px;
 }
@@ -188,8 +128,7 @@ footer {
   left: 17px;
 }
 
-.noUi-vertical .noUi-handle:before,
-.noUi-vertical .noUi-handle:after {
+.noUi-vertical .noUi-handle:after, .noUi-vertical .noUi-handle:before {
   width: 14px;
   height: 1px;
   left: 6px;
@@ -200,23 +139,15 @@ footer {
   top: 17px;
 }
 
-/* Disabled state;
- */
 [disabled] .noUi-connect {
-  background: #B8B8B8;
+  background: #b8b8b8;
 }
 
-[disabled].noUi-target,
-[disabled].noUi-handle,
-[disabled] .noUi-handle {
+[disabled] .noUi-handle, [disabled].noUi-handle, [disabled].noUi-target {
   cursor: not-allowed;
 }
 
-/* Base;
- *
- */
-.noUi-pips,
-.noUi-pips * {
+.noUi-pips, .noUi-pips * {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -226,9 +157,6 @@ footer {
   color: #999;
 }
 
-/* Values;
- *
- */
 .noUi-value {
   position: absolute;
   white-space: nowrap;
@@ -240,25 +168,15 @@ footer {
   font-size: 10px;
 }
 
-/* Markings;
- *
- */
 .noUi-marker {
   position: absolute;
-  background: #CCC;
+  background: #ccc;
 }
 
-.noUi-marker-sub {
-  background: #AAA;
+.noUi-marker-large, .noUi-marker-sub {
+  background: #aaa;
 }
 
-.noUi-marker-large {
-  background: #AAA;
-}
-
-/* Horizontal layout;
- *
- */
 .noUi-pips-horizontal {
   padding: 10px 0;
   height: 80px;
@@ -268,13 +186,8 @@ footer {
 }
 
 .noUi-value-horizontal {
-  -webkit-transform: translate(-50%, 50%);
-  transform: translate(-50%, 50%);
-}
-
-.noUi-rtl .noUi-value-horizontal {
-  -webkit-transform: translate(50%, 50%);
-  transform: translate(50%, 50%);
+  -webkit-transform: translate3d(-50%, 50%, 0);
+  transform: translate3d(-50%, 50%, 0);
 }
 
 .noUi-marker-horizontal.noUi-marker {
@@ -291,9 +204,6 @@ footer {
   height: 15px;
 }
 
-/* Vertical layout;
- *
- */
 .noUi-pips-vertical {
   padding: 0 10px;
   height: 100%;
@@ -302,14 +212,9 @@ footer {
 }
 
 .noUi-value-vertical {
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
+  -webkit-transform: translate3d(0, 50%, 0);
+  transform: translate3d(0, 50%, 0);
   padding-left: 25px;
-}
-
-.noUi-rtl .noUi-value-vertical {
-  -webkit-transform: translate(0, 50%);
-  transform: translate(0, 50%);
 }
 
 .noUi-marker-vertical.noUi-marker {
@@ -329,10 +234,10 @@ footer {
 .noUi-tooltip {
   display: block;
   position: absolute;
-  border: 1px solid #D9D9D9;
+  border: 1px solid #d9d9d9;
   border-radius: 3px;
   background: #fff;
-  color: #000;
+  color: #000E35;
   padding: 5px;
   text-align: center;
   white-space: nowrap;
@@ -352,18 +257,47 @@ footer {
   right: 120%;
 }
 
-.noUi-horizontal .noUi-origin > .noUi-tooltip {
-  -webkit-transform: translate(50%, 0);
-  transform: translate(50%, 0);
-  left: auto;
-  bottom: 10px;
+.irs {
+  position: relative;
+  display: block;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.noUi-vertical .noUi-origin > .noUi-tooltip {
-  -webkit-transform: translate(0, -18px);
-  transform: translate(0, -18px);
-  top: auto;
-  right: 28px;
+div.noUi-target {
+  border: 1px solid transparent;
+}
+
+div.noUi-connect {
+  background: #1941df;
+}
+
+div.noUi-handle {
+  border-radius: 50%;
+}
+
+div.noUi-handle:after, div.noUi-handle:before {
+  top: 6px;
+  left: 11px;
+}
+
+div.noUi-handle:after {
+  left: 14px;
+}
+
+div.noUi-horizontal .noUi-handle {
+  width: 28px;
+  height: 28px;
+  left: -12px;
+  top: -9px;
+}
+
+.noUi-handle {
+  cursor: pointer;
 }
 
 /* old styling */
@@ -930,19 +864,21 @@ body:not(.stv) #svg_mapping text {
 #svg_mapping polyline,
 #svg_mapping polygon {
   fill: rgba(113, 192, 22, 0.5) !important;
+  fill: rgba(25, 65, 223, 0.1098039216) !important;
   stroke-width: 3px;
-  stroke: #161dc0;
+  stroke: #1941df;
 }
 
 #svg_mapping circle {
-  fill: rgba(10, 10, 10, 0.7) !important;
-  stroke-width: 3px;
-  stroke: #71c016;
+  fill: #f7f7f7 !important;
+  stroke-width: 1px;
+  stroke: #1941df;
 }
 
 #svg_mapping text {
-  fill: rgb(81, 197, 207);
-  stroke: rgb(81, 197, 207);
+  fill: #212529;
+  stroke: #212529;
+  font-size: 12px;
 }
 
 #svg_mapping circle.align {
@@ -959,12 +895,17 @@ body:not(.stv) #svg_mapping text {
 }
 
 #svg_mapping circle.cr.selected {
-  fill: rgb(0, 0, 0) !important;
   z-index: 100000;
 }
 
-#svg_mapping circle:hover {
-  fill: rgb(0, 0, 0) !important;
+#svg_mapping g:hover circle {
+  fill: #212529 !important;
+  cursor: pointer;
+}
+
+#svg_mapping g:hover text {
+  fill: #212529 !important;
+  stroke: #ffffff !important;
   cursor: pointer;
 }
 
@@ -986,9 +927,12 @@ body:not(.stv) #svg_mapping text {
   display: none;
   z-index: 19;
   height: 70px;
-  background-color: #fff;
+  background-color: transparent;
   position: absolute;
   font-size: 12px;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
 }
 
 #top_toolbar span,
@@ -996,59 +940,20 @@ body:not(.stv) #svg_mapping text {
   font-size: 12px;
 }
 
+#top_toolbar input {
+  max-width: 80px;
+}
+
 #seat_mapping_close {
-  color: #71c016;
-  font-weight: 50px;
-  font-size: 50px;
-  margin: 20px;
-  line-height: 1;
-  position: absolute;
+  color: #ffffff;
   cursor: pointer;
 }
 
 .seat_head {
-  position: absolute;
-  margin: 30px 0 0 80px;
   font-weight: bold;
-  height: 40px;
-  line-height: 30px;
-  min-width: 300px;
-}
-
-.seat_head > input {
-  max-width: 64px;
-}
-
-.seat_text {
-  position: absolute;
-  margin: 30px 0 0 80px;
-}
-
-#seat_size {
-  margin-left: 80px;
-  min-width: 200px;
-}
-
-#seat_row {
-  margin-left: 350px;
-}
-
-#seat_text {
-  margin-left: 520px;
-}
-
-#seat_price {
-  margin-left: 690px;
-}
-
-#seat_text_vis {
-  margin-left: 850px;
-  padding-top: 2px;
 }
 
 #ul-slider-5 {
-  position: absolute;
-  margin: 40px 0 0 160px;
   width: 150px;
   height: 12px;
 }
@@ -1078,7 +983,7 @@ body:not(.stv) #svg_mapping text {
 #top_toolbar .checkbox {
   display: inline-block;
   position: relative;
-  margin: 0 0 10px;
+  margin: 0;
   font-size: 16px;
   line-height: 24px;
 }
@@ -1130,8 +1035,8 @@ body:not(.stv) #svg_mapping text {
 }
 
 #top_toolbar .checkbox__input:checked + .checkbox__label:before {
-  background-color: #71c016;
-  border-color: #71c016;
+  background-color: #1941df;
+  border-color: #1941df;
 }
 
 #top_toolbar .checkbox__input:checked + .checkbox__label:after {
@@ -1139,16 +1044,8 @@ body:not(.stv) #svg_mapping text {
 }
 
 #reset_zone {
-  margin-right: 54px;
-  margin-top: 33px;
-  color: #c83295;
+  color: #1941df;
   z-index: 99999;
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  text-align: right;
   font-size: 12px;
   cursor: pointer;
   text-decoration: underline;
